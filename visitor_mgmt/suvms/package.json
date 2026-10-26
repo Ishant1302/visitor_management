@@ -1,0 +1,19 @@
+{
+  "name": "suvms",
+  "version": "1.0.0",
+  "description": "Smart University Visitor Management System",
+  "private": true,
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "dev": "concurrently --names \"SERVER,CLIENT\" --prefix-colors \"cyan,magenta\" \"npm run dev --workspace=server\" \"npm run dev --workspace=client\"",
+    "seed": "npm run seed --workspace=server",
+    "test": "node server/tests/lifecycle_and_rbac.test.js",
+    "install:all": "npm install && npm install --workspace=server && npm install --workspace=client"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

@@ -1,0 +1,6 @@
+node_modules/
+server/database/suvms.db
+.env
+dist/
+.DS_Store
+*.log
